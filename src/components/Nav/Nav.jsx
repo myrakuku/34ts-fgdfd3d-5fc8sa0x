@@ -1,7 +1,7 @@
 import logo from './logo.png';
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import '@n8n/chat/style.css';
+import '../../css/chatbotcss.css';
 import { createChat } from '@n8n/chat';
 
 
