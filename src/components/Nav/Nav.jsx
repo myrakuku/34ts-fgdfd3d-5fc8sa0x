@@ -27,12 +27,6 @@ export const Nav = () => {
   }, []);
 
   // n8n
-  useEffect(() => {
-    createChat({
-      webhookUrl: 'http://localhost:5678/webhook/7d2f04f5-5159-4df6-abc3-387964b16684/chat'
-    });
-  }, []);
-
   createChat({
     webhookUrl: 'http://localhost:5678/webhook/7d2f04f5-5159-4df6-abc3-387964b16684/chat',
     webhookConfig: {
