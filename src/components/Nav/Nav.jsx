@@ -2,7 +2,7 @@ import logo from './logo.png';
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import '../../css/chatbotcss.css';
-import { createChat } from '@n8n/chat';
+// import { createChat } from '@n8n/chat';
 
 
 export const Nav = () => {
@@ -27,34 +27,34 @@ export const Nav = () => {
   }, []);
 
   // n8n
-  createChat({
-    webhookUrl: 'http://localhost:5678/webhook/7d2f04f5-5159-4df6-abc3-387964b16684/chat',
-    webhookConfig: {
-      method: 'POST',
-      headers: {}
-    },
-    target: '#n8n-chat',
-    mode: 'window',
-    chatInputKey: 'chatInput',
-    chatSessionKey: 'sessionId',
-    loadPreviousSession: true,
-    metadata: {},
-    showWelcomeScreen: false,
-    defaultLanguage: 'en',
-    initialMessages: [
-      '您好! 👋 請問有什麼服務想查詢？'
-    ],
-    i18n: {
-      en: {
-        title: '',
-        subtitle: "",
-        footer: '',
-        getStarted: 'New Conversation',
-        inputPlaceholder: '請在此輸入文字..',
-      },
-    },
-    enableStreaming: false,
-  });
+  // createChat({
+  //   webhookUrl: 'http://localhost:5678/webhook/7d2f04f5-5159-4df6-abc3-387964b16684/chat',
+  //   webhookConfig: {
+  //     method: 'POST',
+  //     headers: {}
+  //   },
+  //   target: '#n8n-chat',
+  //   mode: 'window',
+  //   chatInputKey: 'chatInput',
+  //   chatSessionKey: 'sessionId',
+  //   loadPreviousSession: true,
+  //   metadata: {},
+  //   showWelcomeScreen: false,
+  //   defaultLanguage: 'en',
+  //   initialMessages: [
+  //     '您好! 👋 請問有什麼服務想查詢？'
+  //   ],
+  //   i18n: {
+  //     en: {
+  //       title: '',
+  //       subtitle: "",
+  //       footer: '',
+  //       getStarted: 'New Conversation',
+  //       inputPlaceholder: '請在此輸入文字..',
+  //     },
+  //   },
+  //   enableStreaming: false,
+  // });
 
   return (
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-100 shadow-lg' : ''}`}>
@@ -80,8 +80,8 @@ export const Nav = () => {
       </div>
       <div className={`fixed inset-0 bg-gray-800 z-40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <div className={`flex flex-col items-center justify-center h-full space-y-8 transform ${isMobileMenuOpen ? 'translate-y-0' : 'translate-y-full transition-transform duration-300'}`}>
-          <Link to="/" className="text-white text-2xl hover:text-sky-300 transition-colors duration-300">關於Hangs</Link>
-          <Link to="/ContactUS" className="text-white text-2xl hover:text-sky-300 transition-colors duration-300">聯絡我們</Link>
+          <Link to="/" className="text-white text-2xl hover:text-sky-300 transition-colors duration-300" onClick={toggleMobileMenu}>關於Hangs</Link>
+          <Link to="/ContactUS" className="text-white text-2xl hover:text-sky-300 transition-colors duration-300" onClick={toggleMobileMenu} >聯絡我們</Link>
           <button onClick={toggleMobileMenu} className="text-white absolute top-3 right-3 p-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
