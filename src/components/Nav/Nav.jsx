@@ -1,8 +1,6 @@
 import logo from './logo.png';
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import '../../css/chatbotcss.css';
-// import { createChat } from '@n8n/chat';
 
 
 export const Nav = () => {
@@ -25,36 +23,6 @@ export const Nav = () => {
       window.removeEventListener('scroll', updateNavbar);
     };
   }, []);
-
-  // n8n
-  // createChat({
-  //   webhookUrl: 'http://localhost:5678/webhook/7d2f04f5-5159-4df6-abc3-387964b16684/chat',
-  //   webhookConfig: {
-  //     method: 'POST',
-  //     headers: {}
-  //   },
-  //   target: '#n8n-chat',
-  //   mode: 'window',
-  //   chatInputKey: 'chatInput',
-  //   chatSessionKey: 'sessionId',
-  //   loadPreviousSession: true,
-  //   metadata: {},
-  //   showWelcomeScreen: false,
-  //   defaultLanguage: 'en',
-  //   initialMessages: [
-  //     '您好! 👋 請問有什麼服務想查詢？'
-  //   ],
-  //   i18n: {
-  //     en: {
-  //       title: '',
-  //       subtitle: "",
-  //       footer: '',
-  //       getStarted: 'New Conversation',
-  //       inputPlaceholder: '請在此輸入文字..',
-  //     },
-  //   },
-  //   enableStreaming: false,
-  // });
 
   return (
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-100 shadow-lg' : ''}`}>

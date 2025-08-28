@@ -5,7 +5,7 @@ import { SectionContact } from "./Section/SectionContact";
 import { GoogleMap } from "./Section/GoogleMap";
 
 
-export const ContactUS = () => { // 指定 Home 組件的類型
+export const ContactUS = () => {
   return (
     <>
     <Nav/>

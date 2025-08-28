@@ -1,4 +1,38 @@
+import React, { useState, useEffect } from 'react';
+import '../../css/chatbotcss.css';
+import { createChat } from '@n8n/chat';
+
 export const Footer = () => {
+  // n8n
+    createChat({
+      webhookUrl: 'https://n8n.cx/webhook/71428b74-637f-48ff-9b80-1b3383863367/chat',
+      webhookConfig: {
+        method: 'POST',
+        headers: {}
+      },
+      target: '#n8n-chat',
+      mode: 'window',
+      chatInputKey: 'chatInput',
+      chatSessionKey: 'sessionId',
+      loadPreviousSession: true,
+      metadata: {},
+      showWelcomeScreen: false,
+      defaultLanguage: 'en',
+      initialMessages: [
+        '您好! 👋 請問有什麼服務想查詢？'
+      ],
+      i18n: {
+        en: {
+          title: '',
+          subtitle: "",
+          footer: '',
+          getStarted: 'New Conversation',
+          inputPlaceholder: '請在此輸入文字..',
+        },
+      },
+      enableStreaming: false,
+    });
+    
     return (
         <footer className="w-full bg-gray-200 text-gray-700 py-4 md:py-6">
         <div className="container mx-auto px-4">

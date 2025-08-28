@@ -9,7 +9,7 @@ import { SectionFive } from "./Section/SectionFive";
 
 export const Home = () => {
   return (
-    <>
+    <>  
       <Nav/>
       <SectionOne />
       <SectionTwo />
