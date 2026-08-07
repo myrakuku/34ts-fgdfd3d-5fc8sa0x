@@ -70,6 +70,23 @@ export const SectionTwo = () => {
               <h3 className="text-[18px] md:text-[18px] mb-2 font-bold">技術轉移</h3>
               <p className="text-[12px] md:text-[12px]">為客戶提供系統使用的培訓以及適當的技能概念</p>
           </div>
+
+        <div className="w-full h-[250px] p-10 m-4 md:w-1/3 lg:w-1/4 shadow-lg border-0.5 border-gray-400 rounded-lg bg-white">
+            <div className="flex justify-center mb-3">
+                <svg class="w-10 h-10 text-blue-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                <line x1="9" y1="6" x2="15" y2="6"/>
+                <line x1="9" y1="10" x2="15" y2="10"/>
+                <line x1="9" y1="14" x2="15" y2="14"/>
+                <line x1="9" y1="18" x2="15" y2="18"/>
+                </svg>
+            </div>
+            <h3 className="text-[20px] md:text-[20px] mb-3 font-bold text-gray-800">數據中心維護服務</h3>
+            <p className="text-[14px] md:text-[14px] text-gray-600 leading-relaxed">
+                監控維護、設備更新升級、備份恢復與災難復原保障
+            </p>
+        </div>
+
   
 
           <div className="w-full h-[250px] p-10 m-4 md:w-1/3 lg:w-1/4 shadow-lg border-0.5 border-gray-400">

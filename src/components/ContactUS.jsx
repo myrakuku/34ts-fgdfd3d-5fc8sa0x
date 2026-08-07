@@ -3,6 +3,7 @@ import { Nav } from "./Nav/Nav";
 import { Footer } from "./Footer/Footer";
 import { SectionContact } from "./Section/SectionContact";
 import { GoogleMap } from "./Section/GoogleMap";
+import { ServiceSelectSection } from "./Section/ServiceSelectSection";
 
 
 export const ContactUS = () => {
@@ -11,6 +12,7 @@ export const ContactUS = () => {
     <Nav/>
     <SectionContact/>
     <GoogleMap/>
+    <ServiceSelectSection />
     <Footer/>
     </>
   );

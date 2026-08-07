@@ -26,7 +26,7 @@ export const Nav = () => {
 
   return (
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-100 shadow-lg' : ''}`}>
-      <div className="max-w-7xl mx-auto pr-4">
+      <div className="mx-auto pl-2 pr-4">
         <div className="flex justify-between">
           <div className="flex space-x-4">
             <Link to="/" className="flex items-center py-2 px-1 text-gray-700">
